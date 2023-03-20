@@ -407,3 +407,91 @@
 // new pessoa("masculino",2.00)]
 
 // contagem(persona5);
+
+
+// 21- Pergunte ao usuário o nome do seu país, continente e sua capital. Através de uma função construtora crie um objeto chamado Pais que tenha essas propriedades e defina o valor das propriedades conforme os valores digitados pelo usuário.
+
+// function pais(pais,continente,capital){
+//   this.pais=pais;
+//   this.continente=continente;
+//   this.capital=capital;
+// }
+
+// var local=prompt("Qual é o nome do seu país?");
+// var continente=prompt("Qual é o nome do seu continente?");
+// var capital=prompt("Qual é o nome do seu capital?");
+
+
+// var pessoa= new pais(local,continente,capital);
+
+// console.log(pessoa)
+
+// 22- Pergunte ao usuário seu nome, idade, e-mail e sexo. Crie um objeto chamado Pessoa que tenha essas propriedades e defina o valor das propriedades conforme os valores digitados pelo usuário.
+
+// function Pessoa(nome,idade,email,sexo){
+//   this.nome=nome;
+//   this.idade=idade;
+//   this.email=email;
+//   this.sexo=sexo;
+// }
+
+// var nome=prompt("Digite o seu nome: ");
+// var idade=parseInt(prompt("Digite a sua idade: "));
+// var email=prompt("Digite o seu e-mail: ");
+// var sexo=prompt("Digite o seu sexo;")
+
+// const persona=new Pessoa(nome,idade,email,sexo);
+// console.log(persona);
+
+// 23- Crie um objeto “fruta” que possua cor, tamanho e país. Atribua “amarelo” para cor, “média” para tamanho e “Brasil” para país. Após isto peça para o usuário digitar uma cor, um tamanho (pequena, média ou grande) e um país. Atualize as propriedades do objeto de acordo com o que foi digitado pelo usuário.
+
+// var fruta={
+//   cor:"amarelo",
+//   tamanho:"média",
+//   pais:"Brasil"
+// }
+
+// var cor=prompt("Digite uma cor:");
+// var tamanho=prompt("Digite o tamanho(pequeno,médio ou grande): ");
+// var pais=prompt("Digite o país de origem: ");
+
+// var fruta={
+//   cor:cor,
+//   tamanho:tamanho,
+//   pais:pais
+// }
+
+// console.log(fruta)
+
+// 24- Crie um objeto chamado “escola” que possui as propriedades: número de alunos, nome do diretor, ano de fundação e endereço. O endereço é um objeto que possui as propriedades: rua, bairro e cidade.
+
+// var escola={
+//   numeroDeAlunos:50,
+//   nomeDoDiretor:"Lauro",
+//   anoDeFundacao:1950,
+//   endereco:{
+//     rua:"Paraíso dos santos",
+//     bairro:"Alegria de Jesus",
+//     cidade:"Sinos encantados"
+//   }
+// };
+
+// console.log(escola)
+
+
+// 25- Crie um objeto “carro” que tenha uma propriedade de modelo, estado, preço base e ano. O objeto também deve possuir um método para calcular o valor estimado. Use a propriedade “this”. Para calcular o valor estimado utilize o preço base – 1000 para cada ano entre o atual e o ano do carro.
+
+// var carro={
+//   modelo:"Batmóvel",
+//   estado:"Perfeito",
+//   preco:10000000,
+//   ano:2020,
+//   valorEstimado:function(){
+//     const anoAtual = new Date().getFullYear();
+//     const anosDeUso = anoAtual - this.ano;
+//     const depreciação = 1000 * anosDeUso;
+//     return this.preco - depreciação;
+//   }
+// }
+
+// console.log(carro.valorEstimado())
