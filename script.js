@@ -25,45 +25,73 @@
 
 // 3- Crie uma função que receba uma frase e troque todas as ocorrências da letra ‘a’ pela letra ‘U’, todas as ocorrências da letra ‘o’ por ‘G’ e que as únicas letras maiúsculas sejam as letras ‘U’ e ‘G’.
 
-// function trocaLetras(frase){
-  
-//   frase= frase.toLowerCase();
-//    frase= frase.replace("a","U");
-//   frase=  frase.replace("o","G");
-//   return frase;
+
+// function substituirLetras(frase) {
+//   let novaFrase = "";
+//   for (let i = 0; i < frase.length; i++) {
+//     let letra = frase[i];
+//     if (letra === "a") {
+//       novaFrase = novaFrase+"U";
+//     } else if (letra == "o") {
+//       novaFrase += "G";
+//     } else if (letra.toUpperCase() === "U" || letra.toUpperCase() === "G") {
+//       novaFrase += letra.toUpperCase();
+//     } else {
+//       novaFrase += letra;
+//     }
+//   }
+//   return novaFrase;
 // }
+
 //  var frasei= prompt("Escreva uma frase");
-// var nova=trocaLetras(frasei)
+// var nova=substituirLetras(frasei)
 
 
 // document.write(nova)
 
 //4- Faça uma calculadora que realize operações com 2 números fornecidos pelo usuário. Após obter os números, pergunte ao usuário qual a operação que ele deseja fazer. Crie uma função para cada tipo de operação. Mostre o resultado ao usuário. 1- Soma, 2- Subtração, 3- Multiplicação, 4- Divisão
 
-
-// function spell(operacao){
-// if(operacao==1){
-//    let resultado = numero1+numero2;
-//   return resultado
-// }else if(operacao==2){
-//   let resultado =  numero1-numero2;
-//  return resultado
-// }else if(operacao==3){
-//   let resultado =   numero1*numero2;
-//   return resultado
-// }else if(operacao==4){
-//   let resultado = numero1/numero2;
-//   return resultado
-// }
+// function somar(n1,n2){
+//   let resultado=n1+n2;
+//   return resultado;
 // }
 
-// var numero1=parseInt(prompt("Digite um número: "));
-// var numero2=parseInt(prompt("Digite um número: "));
+// function subtrair(n1,n2){
+//   let resultado=n1-n2;
+//   return resultado;
+// }
 
-// var operacao=parseInt(prompt("Digite a operação que você deseja fazer: 1)Soma;2)Subtração;3)Multiplicação;4)Divisão: "));
+// function multiplicar(n1,n2){
+//   let resultado=n1*n2;
+//   return resultado;
+// }
 
-// document.write(spell(operacao))
+// function dividir(n1,n2){
+//   let resultado=n1/n2;
+//   return resultado;
+// }
 
+// var n1=0,n2=0,operacao;
+
+// n1=parseInt(prompt("Digite um número: "));
+// n2=parseInt(prompt("Digite um número: "));
+// operacao=parseInt(prompt("Digite uma operação: 1)Soma;2)Substração;3)Multiplicação;4)Divisão "));
+
+// switch(operacao){
+//   case 1:
+//     console.log(somar(n1,n2));
+//     break;
+//   case 2:
+//     console.log(subtrair(n1,n2));
+//     break;
+//   case 3:
+//     console.log(multiplicar(n1,n2));
+//     break;
+//   case 4:
+//     console.log(dividir(n1,n2));
+//     break;
+//   default:console.log("Opção inválida");
+// }
 
 //5 - Crie uma função que receba um número e imprima toda a tabuada de 7 enquanto este número for maior que o valor calculado da tabuada.
 
