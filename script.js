@@ -523,3 +523,165 @@
 // }
 
 // console.log(carro.valorEstimado())
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  
+ <!-- <p id="nome">Teste</p>
+<input type="button" value="Botão" id='but'/>  -->
+
+
+  
+  <!-- <table id="tabela">
+<tr class="azul">
+<td>João</td>
+<td>40</td>
+</tr>
+<tr class="vermelho">
+<td>Maria</td>
+<td>50</td>
+</tr>
+<tr class="azul">
+<td>Ana</td>
+<td>20</td>
+</tr>
+</table> -->
+
+
+
+  <!-- 
+  <table id="tabela">
+<tr>
+<td>João</td>
+<td class="nota">6</td>
+<td>
+<button>Checar aprovação</button>
+</td>
+</tr>
+<tr>
+<td>Maria</td>
+<td class="nota">8</td>
+
+<td>
+<button>Checar aprovação</button>
+</td>
+</tr>
+<tr>
+<td>Ana</td>
+<td class="nota">4</td>
+<td>
+<button>Checar aprovação</button>
+</td>
+</tr>
+</table> -->
+
+  <!-- <div class="mensagem"></div> -->
+  <!-- <span id="texto">Clique em mim</span> -->
+  <!-- <div id='card'></div> -->
+ <!-- Virei um negrito?!
+ -->
+  <!-- <span class="el">Primeiro</span>
+  <span class="el">Segundo</span>
+  <span class="el">Terceiro</span> -->
+
+  <!-- <h2 id="subtitulo">Olá!</h2> -->
+  <!-- <div id="card"></div> -->
+
+    <!-- <input type="button" value="inserir" id="btn"/>
+  <ul id="lista">
+    
+  </ul> -->
+  
+  <!-- <ul id="lista">
+    <li class='fruta'>Maçã</li>
+    <li class='fruta'>Banana</li>
+    <li class='fruta'>Manga</li>
+  </ul>
+  -->
+
+  <!-- <div id='container'>
+    <span>Olá</span>
+  </div> -->
+
+  <!-- <ul id="lista">
+    <li>Acre</li>
+  </ul> -->
+
+<!-- <input type="text" id="input"/> -->
+<!-- 
+  <form action="ex.py" method="POST">
+<p>Nome: <input type="text" id="nome" name="nome"/></p>
+<p>Cargo: <input type="text" id="cargo" name="carg"/></p>
+<p>Salário: <input type="text" id="sal" name="sal"/></p>
+  Departamento:<select id="departamento">
+      <option value="RH">RH</option>
+      <option value="Limpeza">Limpeza</option>
+      <option value="Desenvolvimento">Desenvolvimento</option>
+    </select>
+    <p><input type="button" value="Verificar" id="btn"/></p>
+  
+  </form> -->
+
+   <!-- <form>
+   Nome: <input type="text" id="nome" required/>
+   
+  <p> Data de Fundação: <input type="date" id="data"/></p>
+  <p>E-mail: <input type="mail" id="email"/></p>
+   <p>Descrição: <input type="textarea" id="desc"></p>
+   <p>Atuação:</p>
+   <input type="checkbox" class="select" id="vendas">Vendas
+   <input type="checkbox" class="select" id="marketing">Marketing
+   <input type="checkbox" class="select" id="apps">Aplicativos
+   <p><input type="button" id="validar" value="Validar"></p>
+ </form> -->
+
+    <!-- <script src="script.js"></script>
+</body>
+
+</html>
+ -->
+        <!DOCTYPE html>
+ <html>
+   <head>
+     <meta charset="UTF-8">
+     <title>Refazendo tudo</title>
+     <link href="style.css" rel=stylesheet>
+   </head>
+   <body>
+ <form>
+<p>Login: <input id="login" name="nome" type="text"></p>
+<p>Data: <input id="data" name="data" type="date"></p>
+<p>Gênero:
+   <input type="radio" id='m' name="sexo">Masculino
+    <input type="radio" id='f' name="sexo">Feminino
+    <input type="radio" id='n' name="sexo">Não informado</p>
+<p>Preferências musicais:</p>
+<input type='checkbox' id='c1' name="check">Rock
+<input type='checkbox' id='c2' name="check">MPB
+<input type='checkbox' id='c3' name="check">Funk
+<input type='checkbox' id='c4' name="check">Rock
+
+<p> Senha: <input type="password" name="senha" id="pass1"></p>
+<p>Confirmar Senha: <input type="password" name="senha" id="pass2"></p>
+   <button>Cadastrar</button>
+ </form>
+     <script src="script.js"></script>
+   </body>
+ </html>
+
+
+
+
+  
+  
+  
