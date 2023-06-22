@@ -525,159 +525,334 @@
 // console.log(carro.valorEstimado())
 
 
-<!DOCTYPE html>
-<html>
+// 1-Ao clicar em um botão, chame uma função que adicione uma classe chamada “texto” ao "p" de id ”nome”. Esta classe deve ser criada e possui: text-align: center; font-weight: bold;
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
-</head>
+// var a=document.querySelector('#but');
+// var b=document.querySelector('#nome');
+// a.addEventListener("click",function(){
+// b.classList.add("texto")
+// })
 
-<body>
+//Corrreção do professor:
+
+
+//2-Na tabela, inverta as classes (itens com classe azul terão a classe vermelho e itens com classe vermelho terão a classe azul).
+
+
+// var a=document.getElementsByClassName('azul')
+// var b=document.querySelector('.vermelho')
+
+// for(i=0;i<a.length;i++){
+//   a[i].style.background="red"
+// }
+// b.style.background="blue"
+
+// ou
+
+// var a=document.querySelectorAll('.azul')
+// var b=document.querySelector('.vermelho')
+
+
+// a.style.background="red"
+
+// b.style.background="blue"
+
+//ou
+
+// const trElements = document.querySelectorAll("tr");
+
+// trElements.forEach((trElement) => {
+//   if (trElement.classList.contains("azul")) {
+//     trElement.classList.replace("azul", "vermelho");
+//   } else if (trElement.classList.contains("vermelho")) {
+//     trElement.classList.replace("vermelho", "azul");
+//   }
+// });
+
+//ou
+
+// var azul=document.querySelectorAll(".azul")
+// var verm=document.querySelector(".vermelho")
+
+// azul.forEach(function(e){
+//   e.classList.replace("azul","vermelho");
+// })
+
+// verm.classList.replace("vermelho","azul");
+
+//3. Ao clicar no botão que está dentro de uma "td", chame uma função que verifique o conteúdo da "td" de classe “nota” da mesma "tr". Caso esta nota seja maior ou igual a 5, adicione uma classe à "tr" que faça sua cor de fundo ficar verde. Caso a nota seja menor do que 5, adicione uma classe à "tr" que faça sua cor de fundo ficar vermelho.
+
+var botoes = document.querySelectorAll("button");
+
+for(let i = 0; i< botoes.length; i++){
+  botoes[i].addEventListener("click", function(){
+    let tio = botoes[i].parentNode.previousElementSibling;
+    if(tio.innerText >= 5){
+      tio.parentNode.classList.add("verde")
+  }
+    else{
+       tio.parentNode.classList.add("vermelho")
+    }
+  })
+}
+
+// var botao = document.querySelectorAll("button");
+// var notas = document.querySelectorAll(".nota");
+
+// for (var i = 0; i < botao.length; i++) {
+//   botao[i].addEventListener("click", cor);
+// }
+
+// function cor() {
+// for (var i = 0; i < notas.length; i++) {
+//   var nota =Number(notas[i].textContent);
+//   console.log(nota[i])
+// }
   
- <!-- <p id="nome">Teste</p>
-<input type="button" value="Botão" id='but'/>  -->
+// for (var i = 0; i < notas.length; i++) {
+//   if (nota[i] >= 5) {
+//     this.style.background = "green";
+//   } else {
+//     this.style.background = "red";
+//   }
+// }
 
+
+
+// botao = document.querySelectorAll("button");
+// notas = document.querySelectorAll(".nota");
+
+// for (var i = 0; i < botao.length; i++) {
+//   botao[i].addEventListener("click", cor);
+// }
+// function cor() {
+//   for (var i = 0; i < notas.length; i++) {
+//     nota = Number(notas[i].textContent)
+//     if (nota <= 5) {
+//       botao[i].style.background = "red";
+//     } else {
+//       botao[i].style.background = "green";
+//     }
+//   }
+// }
+
+
+// 4. Usando JavaScript, crie um elemento “span”, contendo o texto “Olá mundo”, que será adicionado como filho em uma “div” de classe “mensagem".
+// var a=document.querySelector(".mensagem")
+// var b=document.createElement("span");
+// b.innerHTML="Olá, mundo!"
+// a.appendChild(b);
+
+// 5. Pelo Javascript adicione um evento de click em um elemento “span” id="texto". Ao clicar, chame uma função que fará aparecer um alert escrito “Cliquei”.
+// var a=document.querySelector("#texto");
+
+// a.addEventListener("click",function(){
+//   alert("Cliquei!")
+// })
+
+// 6. Adicione uma classe “card” a um elemento “div” de id “card”. Se o elemento já possuir a classe “card” você deve adicionar a classe “principal”.
+// var a=document.querySelector("#card")
+// a.classList.add("card")
+// if (a.classList.contains("card")) {
+// a.classList.add("principal")
+// }else{
+//   a.classList.add("card")
+// }
+
+// 7. Utilize o evento onload para trocar a fonte do elemento “body” para negrito.
+// document.body.onload=function(){
+// document.body.style.fontWeight = "bold";
+// }
+
+// 8. Utilize o evento onload para trocar a cor de todos os elementos “span” para verde.
+// var a=document.querySelectorAll(".el")
+
+// document.body.onload=function(){
+//   a.forEach(function(elemento){
+//   elemento.style.color="green"
+// })
+// }
+  
+// 9. Ao clicar em um elemento “h2” de id="subtitulo" com texto “Olá” mude seu conteúdo para “Clicado”. Adicione o evento pelo JavaScript e use a palavra chave “this”.
+// var a=document.querySelector("#subtitulo")
+
+// a.addEventListener("click",function(){
+//   this.innerHTML="Clicado!"
+// })
+
+// 10. Crie um elemento “div” de id “card” que possua a borda 3px dotted green, width 200px e height 200px. Utilize o evento onload para trocar a borda deste elemento “div” para 4px dashed orange.
+// var a=document.querySelector("#card")
+
+// window.onload=function(){
+//   a.style.border="4px dashed orange"
+// }
+
+// 11. Crie um elemento “button” com texto “inserir” que ao ser clicado adicione um elemento “li” com texto “nova entrada” em um elemento “ul” de id “lista”.
+// var a=document.querySelector('#btn')
+// var b=document.querySelector("#lista")
+
+// a.addEventListener('click',function(){
+//   var lista=document.createElement('li')
+//   lista.innerText="nova entrada"
+
+//   b.appendChild(lista)
+// })
+
+
+//Correção do professor:
+
+// var botao = document.createElement("button");
+//  var lista = document.querySelector("#lista");
+// document.querySelector("body").appendChild(botao);
+// botao.innerHTML = "inserir";
+// botao.addEventListener("click", function(){
+//   var li = document.createElement("li");
+//   li.innerText = "Nova entrada";
+//   lista.appendChild(li);
+// })
+
+// 12. Crie uma lista não ordenada em HTML com 3 elementos “li” dentro, contendo cada os textos respectivos: “Maçã”, “Banana”, “Manga”. Faça com que ao clicar em cada elemento seja exibido um alerta com seu conteúdo. Use a palavra chave “this”.
+
+// var lista=document.querySelectorAll('.fruta')
+
+// lista.forEach(function(elemento){
+//   elemento.addEventListener("click",function(){
+//     alert(this.textContent)
+//   })
+// })
+
+// 13. Adicione um event listener de click a um elemento “div” de id “container”. Ao clicar neste elemento “div”, mude o conteúdo de um elemento “span” que é filho deste elemento “div” de “olá” para “teste”.
+// var div=document.querySelector("#container")
+// var span=div.querySelector("span")
+// div.addEventListener('click',function(){
+//   span.innerHTML="teste"
+// })
+
+
+// 14. Adicione um event listener de click a um elemento “ul” de id “lista”. Ao clicar neste elemento “ul”, mude o conteúdo de um elemento “li” que é filho deste elemento “ul” de “Acre” para “Amapá” e sua cor de fundo para azul.
+
+// var a=document.querySelector("#lista")
+// var b=a.querySelector("li")
+
+// a.addEventListener("click",function(){
+//   b.innerText="Amapá"
+//   b.style.background="blue"
+// })
+
+// 15. Utilizando evento de teclado verifique se a tecla apertada no elemento "input" de id="input" for a tecla "a". Caso seja, ative um alerta escrito "Letra a digitada".
+
+// var a=document.querySelector("#input")
+
+// a.addEventListener("keydown",function(){
+//   if(event.key=='a'){
+//     alert("Letra a digitada")
+//   }
+// })
+
+// 16. Crie em HTML um formulário com nome, cargo, salário, um seletor com opções de: "RH", "Limpeza" e "Desenvolvimento" e um botão que ao ser clicado irá capturar os dados preenchidos via JavaScript e fazer um alerta destes dados.
+
+
+// var e=document.querySelector("#btn")
+
+// e.addEventListener("click",function(){
+// var a=document.querySelector('#nome').value
+// var b=document.querySelector('#cargo').value
+// var c=document.querySelector('#sal').value
+// var d=document.querySelector("#departamento").value
+// var mensagem = `Nome: ${nome}\nCargo: ${cargo}\nSalário: ${salario}\nDepartamento: ${departamento}`;
+// alert(mensagem);
+// })
+
+// 17. Crie um formulário com nome de uma empresa, data de fundação, e-mail, descrição da empresa e atuações (Vendas, Marketing, Aplicativos). Capture os dados preenchidos via JavaScript e valide quanto à:
+// - nome com pelo menos 4 caracteres e contendo a palavra "SA"
+// - data de fundação maior do que 01/01/2000 
+// - email com símbolos de "@" e ".", o "@" vindo antes do ponto e a distancia de ao menos 1 caracter entre o "@" e o "." (aaa@a.com é válido) 
+// - descrição com no máximo 50 caracteres 
+// - pelo menos uma atuação válida selecionada (Vendas, Marketing, Aplicativos)
+// var a=document.querySelector("#validar")
+
+// a.addEventListener("click",function(){
+//   var b=document.querySelector("#nome").value
+//   var c=document.querySelector("#data").value
+//   var d=document.querySelector("#email").value
+//   var e=document.querySelector("#desc").value
+//   var f=document.querySelector("#vendas")
+//   var g=document.querySelector("#marketing")
+//   var h=document.querySelector("#apps")
+
+//   let date=new Date(c)
+//   let m1=date.getTime()
+//   let date2=new Date("01/01/2000")
+//   let m2=date2.getTime()
 
   
-  <!-- <table id="tabela">
-<tr class="azul">
-<td>João</td>
-<td>40</td>
-</tr>
-<tr class="vermelho">
-<td>Maria</td>
-<td>50</td>
-</tr>
-<tr class="azul">
-<td>Ana</td>
-<td>20</td>
-</tr>
-</table> -->
+//   if(b.length<4||b.indexOf("SA")==-1){
+//     alert("Nome inválido")
+//   }else if(m1<m2){
+//     alert("Data inválida")
+//   }else if(d.indexOf("@")==-1||d.indexOf(".")==-1||d.indexOf(".")-d.indexOf("@")==1){
+//     alert("E-mail inválido")
+//   }else if(e.length>50){
+//     alert("Descrição inválida")
+//   }else if(f.checked==false && g.checked==false && h.checked==false){
+//     alert("Selecione uma opção")
+//   }else{
+//     alert("Cadastro realizado com sucesso!")
+//   }
+// })
 
 
 
-  <!-- 
-  <table id="tabela">
-<tr>
-<td>João</td>
-<td class="nota">6</td>
-<td>
-<button>Checar aprovação</button>
-</td>
-</tr>
-<tr>
-<td>Maria</td>
-<td class="nota">8</td>
 
-<td>
-<button>Checar aprovação</button>
-</td>
-</tr>
-<tr>
-<td>Ana</td>
-<td class="nota">4</td>
-<td>
-<button>Checar aprovação</button>
-</td>
-</tr>
-</table> -->
+// 18. Crie um formulário com login, data de nascimento, gênero (masculino, feminino, não informado), preferencias musicais (rock, mpb, funk, pop), senha e confirmar senha. Capture os dados preenchidos via JavaScript e valide quanto à:
+// - login com no máximo 8 caracteres
+// - data de nascimento anterior à 01/01/2004
+// - alguma opção de gênero selecionada
+// - pelo menos 2 opções de preferências musicais selecionadas
+// - senha e confirmar senha iguais e de tamanho entre 4 e 10 caracteres
 
-  <!-- <div class="mensagem"></div> -->
-  <!-- <span id="texto">Clique em mim</span> -->
-  <!-- <div id='card'></div> -->
- <!-- Virei um negrito?!
- -->
-  <!-- <span class="el">Primeiro</span>
-  <span class="el">Segundo</span>
-  <span class="el">Terceiro</span> -->
 
-  <!-- <h2 id="subtitulo">Olá!</h2> -->
-  <!-- <div id="card"></div> -->
+// var b=document.querySelector("button")
 
-    <!-- <input type="button" value="inserir" id="btn"/>
-  <ul id="lista">
-    
-  </ul> -->
+// b.addEventListener("click",function(){
+//   var login=document.querySelector("#login").value
+
+//   var datinha=document.querySelector("#data").value
+//   var date=new Date('01/01/2004')
+//   var d1=date.getTime()
+//   var date2=new Date(datinha)
+//   var d2=date2.getTime()
+
+//   var sexo1=document.querySelector("#m").checked
+//   var sexo2=document.querySelector("#f").checked
+//   var sexo3=document.querySelector("#n").checked
+
+
+
+//   var preferencias = document.querySelectorAll('input[name="check"]:checked');
   
-  <!-- <ul id="lista">
-    <li class='fruta'>Maçã</li>
-    <li class='fruta'>Banana</li>
-    <li class='fruta'>Manga</li>
-  </ul>
-  -->
+//   var senha=document.querySelector("#pass1").value
+//   var csenha=document.querySelector("#pass2").value
 
-  <!-- <div id='container'>
-    <span>Olá</span>
-  </div> -->
+//   if(login.length>8){
+//     alert("Login inválido!")
+//   }else if(d1<d2){
+//     alert("Data inválida")
+//   }else if(sexo1==false&&sexo2==false&&sexo3==false){
+//     alert("Selecione um gênero")
+//   }else if(preferencias.length<2){
+//     alert("Selecione duas opções")
+//   }else if(senha<4||senha>10){
+//     alert("Senha inválida!")
+//   }else if(csenha!=senha){
+//     alert("As senhas devem ser iguais!")
+//   }
+//   else{
+//     alert("Cadastro realizado com sucesso")
+//   }
+// })
 
-  <!-- <ul id="lista">
-    <li>Acre</li>
-  </ul> -->
 
-<!-- <input type="text" id="input"/> -->
-<!-- 
-  <form action="ex.py" method="POST">
-<p>Nome: <input type="text" id="nome" name="nome"/></p>
-<p>Cargo: <input type="text" id="cargo" name="carg"/></p>
-<p>Salário: <input type="text" id="sal" name="sal"/></p>
-  Departamento:<select id="departamento">
-      <option value="RH">RH</option>
-      <option value="Limpeza">Limpeza</option>
-      <option value="Desenvolvimento">Desenvolvimento</option>
-    </select>
-    <p><input type="button" value="Verificar" id="btn"/></p>
-  
-  </form> -->
-
-   <!-- <form>
-   Nome: <input type="text" id="nome" required/>
-   
-  <p> Data de Fundação: <input type="date" id="data"/></p>
-  <p>E-mail: <input type="mail" id="email"/></p>
-   <p>Descrição: <input type="textarea" id="desc"></p>
-   <p>Atuação:</p>
-   <input type="checkbox" class="select" id="vendas">Vendas
-   <input type="checkbox" class="select" id="marketing">Marketing
-   <input type="checkbox" class="select" id="apps">Aplicativos
-   <p><input type="button" id="validar" value="Validar"></p>
- </form> -->
-
-    <!-- <script src="script.js"></script>
-</body>
-
-</html>
- -->
-        <!DOCTYPE html>
- <html>
-   <head>
-     <meta charset="UTF-8">
-     <title>Refazendo tudo</title>
-     <link href="style.css" rel=stylesheet>
-   </head>
-   <body>
- <form>
-<p>Login: <input id="login" name="nome" type="text"></p>
-<p>Data: <input id="data" name="data" type="date"></p>
-<p>Gênero:
-   <input type="radio" id='m' name="sexo">Masculino
-    <input type="radio" id='f' name="sexo">Feminino
-    <input type="radio" id='n' name="sexo">Não informado</p>
-<p>Preferências musicais:</p>
-<input type='checkbox' id='c1' name="check">Rock
-<input type='checkbox' id='c2' name="check">MPB
-<input type='checkbox' id='c3' name="check">Funk
-<input type='checkbox' id='c4' name="check">Rock
-
-<p> Senha: <input type="password" name="senha" id="pass1"></p>
-<p>Confirmar Senha: <input type="password" name="senha" id="pass2"></p>
-   <button>Cadastrar</button>
- </form>
-     <script src="script.js"></script>
-   </body>
- </html>
 
 
 
